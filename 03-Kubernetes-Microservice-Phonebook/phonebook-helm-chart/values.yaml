@@ -1,0 +1,5 @@
+webserver_image: abra7am/project03-webserver
+
+resultserver_image: abra7am/project03-resultserver 
+
+mysql_image_version: mysql:5.7
