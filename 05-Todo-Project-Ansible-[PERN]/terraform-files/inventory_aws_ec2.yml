@@ -8,6 +8,3 @@ keyed_groups:
   - key: tags.environment
 compose:
   ansible_host: public_ip_address
-
-  #! Dynamic inventory
-  #! _aws_ec2.yml !
