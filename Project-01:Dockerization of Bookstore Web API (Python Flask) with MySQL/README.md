@@ -1,4 +1,4 @@
-# Project-02: Dockerization of Bookstore Web API (Python Flask) with MySQL
+# Project-01:Dockerization of Bookstore Web API (Python Flask) with MySQL
 
 ## Description
 

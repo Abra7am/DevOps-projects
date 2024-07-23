@@ -1,1 +1,1 @@
-DevOps Projects are added regularly,
+DevOps Portfolio and Capstone Projects

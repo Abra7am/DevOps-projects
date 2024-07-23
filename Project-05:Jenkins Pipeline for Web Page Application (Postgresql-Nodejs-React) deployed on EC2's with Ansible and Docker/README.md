@@ -1,4 +1,4 @@
-# Project-06: Jenkins Pipeline for Web Page Application (Postgresql-Nodejs-React) deployed on EC2's with Ansible and Docker
+# Project-05: Jenkins Pipeline for Web Page Application (Postgresql-Nodejs-React) deployed on EC2's with Ansible and Docker
 
 ## Description
 
