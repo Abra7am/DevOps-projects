@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: resultserver
+  name: resultserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: resultserver
+  template:
+    metadata:
+      labels:
+        app: resultserver
+    spec:
+      containers:
+      - image: abra7am/project03-resultserver
+        name: project03-resultserver
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        envFrom:
+        - secretRef:
+            name: mysql-secret
+        - configMapRef:
+            name: servers-configmap
+        resources:
+          requests: 
+            memory: "200Mi"
+            cpu:  "100m"
+          limits:
+            memory: "750Mi"
+            cpu:  "750m"
