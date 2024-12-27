@@ -1,0 +1,6 @@
+# we ignore files to be excluded from docker image
+README.md
+.git*
+k8s
+Dockerfile
+.dockerignore

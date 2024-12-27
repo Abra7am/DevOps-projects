@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+        - name: webapp
+          image: abra7am/webapp:latest
+          imagePullPolicy: Always
+          env:
+            - name: RAILS_ENV
+              value: test
+            - name: SECRET_KEY_BASE
+              valueFrom:
+                secretKeyRef:
+                  name: app-secrets
+                  key: secret_key_base
+            - name: DATABASE_URL
+              value: "postgres://username:password@postgres-service:5432/dbname"  
+          ports:
+            - containerPort: 3000
